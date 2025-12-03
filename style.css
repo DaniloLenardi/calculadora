@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin: 30px;
+}
+
+header h1{
+    text-align: center;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    margin: 20px;
+}
+
+section button{
+    padding: 40px;
+    font-size: larger;
+    background-color: transparent;
+    transition: ease-in 0.2s background-color;
+    border: none;
+}
+
+section button:hover{
+   background-color: #00ffff3c;
+}
+
+.tela{
+    width: 300px;
+    padding: 20px;
+    text-align: end;
+}
+
+.tela p{
+    font-size: 25px;
+}
+
+#tela2{
+    font-size: small;
+    color: rgb(124, 124, 124);
+}

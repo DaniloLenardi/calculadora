@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bem vindo a Calculadora Master</h1>
+    </header>
+
+    <main>
+        <section class="tela">
+            <p id="tela2">-</p>
+            <p id="tela">0</p>
+        </section>
+        <section class="botoes">
+            <table border="0" cellspacing="10">
+                <tr>
+                    <td><button onclick="digitar('1')">1</button></td>
+                    <td><button onclick="digitar('2')">2</button></td>
+                    <td><button onclick="digitar('3')">3</button></td>
+                    <td><button onclick="setOp('+')">+</button></td>
+                    <td><button onclick="limpar()">C</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="digitar('4')">4</button></td>
+                    <td><button onclick="digitar('5')">5</button></td>
+                    <td><button onclick="digitar('6')">6</button></td>
+                    <td><button onclick="setOp('-')"> - </button></td>
+                    <td><button onclick="apagarUltimo()"><-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="digitar('7')">7</button></td>
+                    <td><button onclick="digitar('8')">8</button></td>
+                    <td><button onclick="digitar('9')">9</button></td>
+                    <td><button onclick="setOp('x')">x</button></td>
+                    <td><button onclick="setOp('/')">&#247;</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setOp('R')">&radic;</button></td></td>
+                    <td><button onclick="digitar('0')">0</button></td>
+                    <td><button onclick="digitar('.')">,</button></td>
+                    <td><button onclick="calcular()">=</button></td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
