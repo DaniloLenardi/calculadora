@@ -2,9 +2,7 @@ let numeroAtual = ""
 let n1 = null
 let operacao = null
 
-function formatarNumero(numeroAtual) {
-    return new Intl.NumberFormat('pt-BR').format(valor);
-}
+
 
 function atualizarTela(valor) {
     document.getElementById("tela").innerText = valor
@@ -23,31 +21,34 @@ function setOp(op) {
     numeroAtual = " "
 }
 
+
 function calcular() {
     if (n1 === null || operacao === null || numeroAtual === "") return;
 
     let n2 = Number(numeroAtual);
     let resultado = 0;
     let tela2 = document.getElementById("tela2")
-
+    let media = null
+    
     if (operacao === "+"){
-        tela2.innerText = `${n1} + ${n2}`
+        tela2.innerText = `${n1} + ${n2} =`
         resultado = n1 + n2;
     } 
     if (operacao === "-"){
-        tela2.innerText = `${n1} - ${n2}`
+        tela2.innerText = `${n1} - ${n2} =`
         resultado = n1 - n2;
     } 
     if (operacao === "x"){
-        tela2.innerText = `${n1} X ${n2}`
+        tela2.innerText = `${n1} X ${n2} =`
         resultado = n1 * n2;
     } 
     if (operacao === "/"){
-        tela2.innerText = `${n1} / ${n2}`
+        tela2.innerText = `${n1} / ${n2} =`
         resultado = n1 / n2;
     } 
     if (operacao === "R") {
         n2 = null
+        tela2.innerText = `Raiz(${n1}) =`
         resultado = Math.sqrt(n1)
     }
 
@@ -63,7 +64,8 @@ function limpar() {
     numeroAtual = "";
     n1 = null;
     operacao = null;
-    document.getElementById("tela2").innerText = " "
+    media = null
+    document.getElementById("tela2").innerText = " - "
     atualizarTela("0");
 }
 
